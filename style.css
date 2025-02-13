@@ -75,7 +75,7 @@ body {
 }
 
 .text {
-  font-family: "Snell Roundhand", cursive;
+  font-family: "Snell Roundhand", cursive, sans-serif;
   font-size: 18px;
   text-align: center;
   line-height: 1.2;
