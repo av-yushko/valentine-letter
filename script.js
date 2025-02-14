@@ -23,3 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
         card.style.top = "0";
     }, true);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("background-music");
+
+    // Перевіряємо, чи дозволено автозапуск
+    const playAudio = () => {
+        audio.play().catch(error => {
+            console.warn("Автовідтворення заблоковано, потрібно взаємодія з користувачем.", error);
+        });
+    };
+
+    playAudio();
+
+    // Альтернатива – включення після першої взаємодії
+    document.addEventListener("click", playAudio, { once: true });
+});
+
